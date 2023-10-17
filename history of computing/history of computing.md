@@ -136,7 +136,55 @@ The original meaning of the term computer was a person who performed mathematica
 
     - **Web 2.0**
 
-    - The original internet developed in 1989 had very static html pages where users could view or download content - it was **Web 1.0**. As the internet developed, in the mid-2000s **Web 2.0** was coined to capture the change to a dynamic **World Wide Web**
+        - The original internet developed in 1989 had very static html pages where users could view or download content - it was **Web 1.0**. As the internet developed, in the mid-2000s **Web 2.0** was coined to capture the change to a dynamic **World Wide Web**
+
+        - **Javascript**, for example, was developed in 1995 to give the browser more choice and responsiveness. By the early 2000s, **JS** could do more and more through web browsers. As the web became more and more of a business and social tool, technologies such as **AJAX (Asyncronous Javascript And eXtensible markup language)** allowed pages to update seamlessly without the need for http requests. **Google Maps** uses and **AJAX** engine to allow users to work on data in realtime in their browser.
+
+- 2021 - present
+    - **Web 3.0**
+    
+        - Building on web 2.0, web 3.0 places a strong emphasis on decentralized application and will probably make extensive use of **Blockchain**-Based technologies. It will also use machine learning and **AI** to empower a more inteligent and adaptive web
+
+    - **November 2022**
+
+        - Release of **ChatGPT**
+
+# Key Dates
+- **1936:** The Turing Machine
+- **1942-1946:** First Electronic Computers: Colossus and ENIAC
+- **1947:** Solid State Transistors
+- **1953:** Invention of High Level Programming Languages
+- **1958:** Integrated Circuits
+- **1973:** Mobile Phones and Interconnected Computers
+- **1977:** First Modern PC - Apple II
+- **1989:** The World Wide Web
+- **2000-2020:** Cloud Computing and the Smart Phone
+
+|Year|Invention|
+|---|---|
+**1936:** The Turing Machine
+**1942-1946:** First Electronic Computers: Colossus and ENIAC
+**1947:** Solid State Transistors
+**1953:** Invention of High Level Programming Languages
+**1958:** Integrated Circuits
+**1973:** Mobile Phones and Interconnected Computers
+**1977:** First Modern PC - Apple II
+**1989:** The World Wide Web
+**2000-2020:** Cloud Computing and the Smart Phone
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Moores Law
 
