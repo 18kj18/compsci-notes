@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Turing Machines - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">History of computing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../history%20of%20computing/history%20of%20computing/" class="dropdown-item">History of Computing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Turing machine <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Turing Machines</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../history%20of%20computing/history%20of%20computing/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#turing-machines" class="nav-link">Turing Machines</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#operation" class="nav-link">Operation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#states" class="nav-link">States</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#significance" class="nav-link">Significance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="turing-machines">Turing Machines</h1>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>
+<p>The Turing Machine (TM) was invented in 1936 by <em>Alan Turing</em>.</p>
+</li>
+<li>
+<p>It is a basic abstract symbol-manipulating device that can be used to simulatethe logic of any computer that could possibly be constructed.</p>
+</li>
+<li>
+<p>Although it was not actally constructed by Turing, it's theory yielded many insights.</p>
+</li>
+<li>
+<p>A Turing Machine consists of 3 components:</p>
+<ol>
+<li>
+<p>An infinitley long tape made up of individual cells. Each cell can contain a single character - typically 1, 0, or B(Blank)</p>
+</li>
+<li>
+<p>A read/write head pointed at an individual cell.</p>
+</li>
+<li>
+<p>A controller (aka finite-state machine) which instructs the read/write head what to do.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Anything that is possible to (mathematically) compute could be programmed on a Turing Machine.</p>
+</li>
+</ul>
+<h2 id="operation">Operation</h2>
+<ul>
+<li>
+<p>initially the tape is inscribed with a sequence of characters, the input.</p>
+</li>
+<li>
+<p>The operation of the Turing Machine is controlled by the finite- state machine (controller)</p>
+</li>
+<li>
+<p>The operation takes place as a sequence of steps known as transitions.</p>
+</li>
+<li>
+<p>the controller decides for a given (input, character, state) pair, (output character state) pair - known as a transition.</p>
+</li>
+<li>
+<p>each transition involves:</p>
+<ul>
+<li>Reading</li>
+<li>Writing</li>
+<li>Moving</li>
+<li>Updating (state)</li>
+</ul>
+</li>
+<li>
+<p>Transitions can be expressed in the following ways:</p>
+<ul>
+<li>
+<p>state transition diagram <br />
+<img alt="Example of a state transition diagram" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4PMan-B_DcKhUDkL_ANDUiJPoiCmE4ziSEA&amp;usqp=CAU" /></p>
+</li>
+<li>
+<p>state transition table <br />
+<img alt="Example of a state transition table" src="data:image/png;base64,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" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>The above state transition table and diagram shows a singular transition which says:</p>
+<ul>
+<li>figure it out yourself</li>
+</ul>
+</li>
+<li>
+<p>The output is the sequence of characters left on the tape when the Turing Machine halts.</p>
+</li>
+</ul>
+<h2 id="states">States</h2>
+<ul>
+<li>
+<p>At any given time, a TM is said to be in a particular state. States are usually denoted by the letter S followed by a number (ex. S2) is taken to mean state 2.</p>
+</li>
+<li>
+<p>S0 is conventionally used to denote the initial state. This is the state the TM is in before it starts to operate.</p>
+</li>
+<li>
+<p>A double circle is used to denote the final or <strong>halting</strong> state. This is the state the TM is in when it finishes.</p>
+</li>
+<li>
+<p>For example:                  <br />
+<img alt="Example" src="../ex1.png" /></p>
+</li>
+</ul>
+<h2 id="significance">Significance</h2>
+<ul>
+<li>
+<p>Earlier we asked the question: <em>How do we define computability?</em></p>
+</li>
+<li>
+<p>Now we can provide the answer: <em>A task is computable if it can be carried out by a Turing Machine</em></p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
